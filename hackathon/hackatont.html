@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="hackatont.css">
+
+<body>
+    <div class="feedback-container">
+        <div class="feedback-header">Feedback TA</div>
+        <div class="feedback-body">
+            <div class="feedback-input">
+                <h3 class="feedback-input-heading">Thầy Phú dạy có hay không???</h3>
+                <div class="btn-score-group">
+                    <button class="btn-score" data-score="1">1</button>
+
+                    <button class="btn-score" data-score="2">2</button>
+
+                    <button class="btn-score" data-score="3">3</button>
+
+                    <button class="btn-score" data-score="4">4</button>
+
+                    <button class="btn-score active" data-score="5">5</button>
+
+                    <button class="btn-score" data-score="6">6</button>
+
+                    <button class="btn-score" data-score="7">7</button>
+
+                    <button class="btn-score" data-score="8">8</button>
+
+                    <button class="btn-score" data-score="9">9</button>
+
+                    <button class="btn-score" data-score="10">10</button>
+                </div>
+                <div class="input-container">
+                    <input id="feedbackInput" placeholder="Nhập nội dung feedback" type="text" class="input">
+                    <button class="btn-send btn-dark">Send</button>
+                </div>
+                <p class="error" style="display: none;">Nội dung phải ít nhất 10 ký tự</p>
+            </div>
+            <div class="range-container">
+                <div class="count-review">
+                    <span class="review-number">0</span> reviews
+                </div>
+                <div class="average-rate">
+                    <span>Average rating:</span>
+                    <span class="average-number">0</span>
+                </div>
+            </div>
+
+            <!-- Feedback content start -->
+            <div class="list-feedback-content"></div>
+            <!-- Feedback content end -->
+        </div>
+    </div>
+    <script src="./hackatont.js"></script>
+</body>
+
+</html>

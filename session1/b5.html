@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let danhSachTaiKhoan = [
+  {userName: 'user1', password: 'abc123'},
+  {userName: 'user2', password: 'pass word'},
+  {userName: 'user3', password: 'password'}
+];
+function kiemTraMatKhau() {
+  let taiKhoanChuaDauCach = danhSachTaiKhoan.filter((taiKhoan) => taiKhoan.password.includes(' '));
+  
+  if (taiKhoanChuaDauCach.length > 0) {
+    console.log('Các tài khoản có mật khẩu chứa dấu cách:');
+    taiKhoanChuaDauCach.forEach((taiKhoan) => {
+      console.log('Vị trí:', danhSachTaiKhoan.indexOf(taiKhoan));
+      console.log('Username:', taiKhoan.userName);
+      console.log('Password:', taiKhoan.password);
+    });
+  } else {
+    console.log('Tất cả các tài khoản hợp lệ:');
+    danhSachTaiKhoan.forEach((taiKhoan) => {
+      console.log('Username:', taiKhoan.userName);
+      console.log('Password:', taiKhoan.password);
+    });
+  }
+}
+kiemTraMatKhau();
+    </script>
+</body>
+</html>

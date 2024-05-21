@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let danhSachLopHoc = [
+            {id: 1, number: 25},
+            {id: 2, number: 30},
+            {id: 3, number: 50}
+        ];
+        let danhSachMoi = danhSachLopHoc.map((lopHoc) => {
+            if (lopHoc.number < 30) {
+        return { id: lopHoc.id, number: lopHoc.number + 10 };
+            } else if (lopHoc.number > 40) {
+        return { id: lopHoc.id, number: lopHoc.number - 10 };
+            } else {
+        return lopHoc;
+            }
+        });
+        console.log(danhSachMoi);
+    </script>
+</body>
+</html>

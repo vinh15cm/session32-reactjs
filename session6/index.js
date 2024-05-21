@@ -1,0 +1,10 @@
+"use strict";
+let b = 5;
+console.log("typescript basic");
+let number = 5;
+let string = "minh thu";
+let null1 = null;
+let undefined1 = undefined;
+let boolean1 = true;
+let userName = "hoa";
+userName = "5";

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>The word is : ***</h3>
+    <br>
+    <input type="text" id="answer">
+    Remaining guess : 5
+    <br>
+    <button onclick="checkAswer()">Guess</button>
+    <script>
+        /*
+        58975 // quỳnh // hoàng
+        let arr=["quỳnh","hoàng","phương"]
+        */
+        let arr = ["hoa", "hao", "han", "nam", "anh", "tan", "thu", "tai", "tho"];
+        let check = arr[Math.floor(Math.random() * arr.length)];
+        console.log(check)
+
+        // lay gia tri o input
+        function checkAswer() {
+            let a = document.getElementById("answer").value;
+            if (a === check) {
+                alert("ban da dung!")
+            } else {
+                alert("ban nhap chua dung!")
+            }
+        }
+        // Mảng các từ cho trước
+        const words = ["apple", "banana", "orange", "grape", "pineapple"];
+
+        let wordToGuess; // Từ cần đoán
+        let guessedWord; // Từ đã đoán (ban đầu là dạng * tương ứng với số ký tự của từ cần đoán)
+        let guessesLeft; // Số lần đoán còn lại
+
+        // Hàm để chọn từ ngẫu nhiên từ mảng
+        function chooseRandomWord() {
+            const randomIndex = Math.floor(Math.random() * words.length);
+            return words[randomIndex];
+        }
+
+        // Hàm để khởi tạo trò chơi mới
+        function initializeGame() {
+            wordToGuess = chooseRandomWord().toLowerCase();
+            guessedWord = "*".repeat(wordToGuess.length);
+            guessesLeft = 6; // Số lần đoán ban đầu
+        }
+
+        // Hàm để kiểm tra xem người dùng đã đoán đúng hay không và cập nhật từ đã đoán
+        function guessLetter(letter) {
+            if (wordToGuess.includes(letter)) {
+                // Nếu chữ cái có trong từ cần đoán
+                for (let i = 0; i < wordToGuess.length; i++) {
+                    if (wordToGuess[i] === letter) {
+                        guessedWord = guessedWord.substr(0, i) + letter + guessedWord.substr(i + 1);
+                    }
+                }
+            } else {
+                // Nếu chữ cái không có trong từ cần đoán
+                guessesLeft--;
+            }
+        }
+
+        // Hàm để kiểm tra xem trò chơi đã kết thúc chưa
+        function isGameOver() {
+            return guessedWord === wordToGuess || guessesLeft === 0;
+        }
+
+        // Khởi tạo trò chơi mới
+        initializeGame();
+
+        // Ví dụ về cách sử dụng các hàm trên:
+        console.log("Từ cần đoán:", wordToGuess);
+        console.log("Từ đã đoán ban đầu:", guessedWord);
+        console.log("Số lần đoán còn lại:", guessesLeft);
+
+        guessLetter("a");
+        console.log("Từ đã đoán sau khi đoán 'a':", guessedWord);
+        console.log("Số lần đoán còn lại sau khi đoán 'a':", guessesLeft);
+
+        guessLetter("p");
+        console.log("Từ đã đoán sau khi đoán 'p':", guessedWord);
+        console.log("Số lần đoán còn lại sau khi đoán 'p':", guessesLeft);
+
+        guessLetter("x");
+        console.log("Từ đã đoán sau khi đoán 'x':", guessedWord);
+        console.log("Số lần đoán còn lại sau khi đoán 'x':", guessesLeft);
+
+        // Tiếp tục đoán các chữ cái khác...
+
+    </script>
+</body>
+
+</html>

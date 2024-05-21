@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let numbers = [5, 6, 7, 8, 9];
+        let newArr = numbers;//gán địa chỉ
+        let newArr1 = [...numbers];//tạo địa chỉ ô nhớ mới
+        let a = []
+        let b = []
+        console.log(a == b)
+        numbers.push(4);
+        console.log(11111, newArr1);
+        let obj1 = {
+            name: 'minh',
+            address: 'hà nội',
+            age: 20,
+            phone: "555",
+            email: "minh@gmail.com"
+        }
+        let obj2 = { ...obj1 }//tạo địa chỉ mới
+        obj1.name = "hoa";
+        console.log(obj2)
+        console.log(obj1 == obj2)// so sánh 2 địa chỉ
+    </script>
+</body>
+
+</html>

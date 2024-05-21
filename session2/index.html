@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        let acc
+        */
+        let acc = [
+            {
+                userName: "hoa",
+                password: "123456",
+            },
+            {
+                userName: "hoa",
+                password: "235 324",
+            },
+            {
+                userName: "hoa",
+                password: "058 403",
+            }
+        ]
+        let taiKhoanKoCach = acc.filter((taiKhoan) => taiKhoan.password.includes(' '));
+        if (taiKhoanKoCach.length > 0) {
+            console.log("tài khoản có mật khẩu chứa dấu cách");
+            taiKhoanKoCach.forEach((taiKhoan) => {
+                console.log("vị trí :", acc.indexOf(taiKhoan));
+            });
+        } else {
+            console.log("tất cả các tài khoản không hợp lệ");
+            acc.forEach((taiKhoan) => {
+                console.log('userName', taiKhoan.userName)
+                console.log('password', taiKhoan.password)
+            });
+        }
+        //out put
+    </script>
+</body>
+
+</html>

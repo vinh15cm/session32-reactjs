@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function hasUppercase(str) {
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] >= 'A' && str[i] <= 'Z') {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        // Test với các input và in kết quả
+        console.log(hasUppercase("hello")); // Output: false
+        console.log(hasUppercase("Hello")); // Output: true
+        console.log(hasUppercase("hELLo")); // Output: true
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let danhSachSach = [
+            {id: 1, name: 'Sách A'},
+            {id: 2, name: 'Sách B'},
+            {id: 3, name: 'Sách C'}
+        ];
+    function timSachTheoId(id) {
+    let sachTimThay = danhSachSach.find((sach) => sach.id === id);
+    if (sachTimThay) {
+
+        console.log('Id sách:', sachTimThay.id);
+        console.log('Tên sách:', sachTimThay.name);
+        
+    } else {
+    console.log('Không có kết quả tìm kiếm');
+    }
+}
+    timSachTheoId(2);
+    </script>
+</body>
+</html>

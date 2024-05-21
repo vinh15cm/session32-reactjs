@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let student = [
+            {
+                id: 1,
+                name: "Ngọc Hà",
+            },
+            {
+                id:2,
+                name:"Thế Cường",
+            },
+            {
+                id:3,
+                name:"Nguyệt Anh"
+            },
+            {
+                id:4,
+                name:"Kim Anh"
+            },
+        ]
+        let result =  student.forEach((item1,index,array)=>{
+        console.log("item",item1);
+        return 100
+       })
+       console.log(result);
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Xây dựng hàm sử dụng toán tử rest
+        function inTatCa(...args) {
+            console.log("Các đối số được truyền vào là:");
+            args.forEach((arg, index) => {
+                console.log("Đối số", index + 1, ":", arg);
+            });
+        }
+
+        // Gọi hàm với số lượng đối số bất kỳ
+        inTatCa(1, "hello", [1, 2, 3], { name: "John" });
+    </script>
+</body>
+
+</html>

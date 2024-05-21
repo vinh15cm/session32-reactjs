@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        các hàm nâng cao tiếp
+        */
+        let accounts = [
+            {
+                name: "minh",
+                password: "123456",
+                address: "hà nội",
+            },
+            {
+                name: "minh",
+                password: "043048",
+                address: "ninh bình",
+            },
+            {
+                name: "minh",
+                password: "784937",
+                address: "sài gòn",
+            },
+        ]
+        // kiểm tra mảng accounts xem có đối tượng nào có đối tượng ở ninh bình không
+        let result = accounts.some((item, index, arr) => {
+            return item.address === "ninh bình"
+        });
+        if (result) {
+            console.log("có gía trị thoả mãn");
+        } else {
+            console.log("không có giá trị thỏa mãn")
+        }
+    </script>
+</body>
+
+</html>

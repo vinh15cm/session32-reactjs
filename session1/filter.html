@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let numbers = [5, 9, 12, 18];
+        // tìm trong mảng numbers lấy ra các phần tử lớn hơn 11
+        let result = numbers.filter((item1, index, arr) => {
+            return item1 > 11;
+        })
+        console.log(result);//[12,18]
+    </script>
+</body>
+
+</html>

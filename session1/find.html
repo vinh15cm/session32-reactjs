@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let student = [
+            {
+                id: 15,
+                name: "minh thu",
+                address: "hà nội"
+
+            },
+            {
+                id: 16,
+                name: "hồng vân",
+                address: "hcm"
+
+            },
+            {
+                id: 17,
+                name: "thỏa",
+                address: "hà nam"
+            }
+
+        ]
+        let result = student.find((item1, index, arr) => {
+            return item1.name == "hồng vân"
+        })
+        console.log(result);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function typeConsole(type = "log") {
+            console[type]("Đây là type:", type);
+        }
+
+        // Test với các trường hợp và in ra kết quả
+        typeConsole(); // Mặc định sử dụng console.log
+        typeConsole("warn");
+        typeConsole("error");
+    </script>
+</body>
+
+</html>

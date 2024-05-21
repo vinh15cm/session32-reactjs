@@ -1,0 +1,39 @@
+.squares1,
+.squares2,
+.squares3 {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.squares1 {
+    background-color: red;
+}
+
+.squares2 {
+    background-color: blue;
+}
+
+.squares3 {
+    background-color: green;
+}
+
+.squares1:hover {
+    background-color: blue;
+}
+
+.squares2:hover {
+    background-color: green;
+}
+
+.squares3:hover {
+    background-color: red;
+}
+
+.manager {
+    display: flex;
+    gap: 50px;
+}

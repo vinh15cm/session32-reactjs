@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function hasNegativeNumber(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] < 0) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        // Test với các input và in kết quả
+        console.log(hasNegativeNumber([1, 2, 3, 4, -5])); // Output: true
+        console.log(hasNegativeNumber([1, 2, 3, 4, 5])); // Output: false
+    </script>
+</body>
+
+</html>

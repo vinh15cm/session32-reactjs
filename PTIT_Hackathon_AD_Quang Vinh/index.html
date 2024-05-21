@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quản Lý Công Việc</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="task-manager">
+        <h1>Danh sách công việc</h1>
+        <div class="input-group mb-3">
+            <input type="text" id="taskInput" class="form-control" placeholder="Nhập tên công việc">
+            <div class="input-group-append">
+                <button id="addTask" class="btn btn-success">Thêm</button>
+            </div>
+        </div>
+        <ul id="taskList" class="list-group"></ul>
+        <div id="taskProgress" class="text-center">Công việc đã hoàn thành: <span id="completedCount">0</span>/<span
+                id="totalCount">0</span></div>
+    </div>
+
+    <!-- Modal -->
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

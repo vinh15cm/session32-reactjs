@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let students = [
+            {
+                name: "mai",
+                gender: "male",
+                address: "ha noi",
+            },
+            {
+                name: "nam",
+                gender: "female",
+                address: "ha noi",
+            },
+            {
+                name: "ngoc",
+                gender: "female",
+                address: "ha noi",
+            },
+        ]
+        // tất cả các phần tử trong students có phải là nam không
+        // tất cả học sinh đều ở hà nội phải không
+        let check1 = students.every(item => item.gender === "male")
+        console.log(check1);
+
+    </script>
+</body>
+
+</html>

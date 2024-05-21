@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        reduce : tính toán
+        ngắn hơn so với for thường
+        */
+
+        // tính tổng tất cả các phần tử trong numbers bằng for
+        // let numbers = [5, 7, 9, 11];
+        // // let sum = 0;// initial : giá trị khởi tạo
+
+        // // for (let i = 0; i < numbers.length; i++) {
+        // //     sum += numbers[i];// gán giá trị
+        // // }
+
+        // // console.log(":", sum);
+        // let total1 = numbers.reduce((accumulator, currentValue, arr) => {
+        //     return accumulator + currentValue
+        // })
+        // // let a = numbers.reduce(()=>{},0) 
+        // console.log(total1);
+        // let total2 = numbers.reduce((accumulator, currentValue, arr) => {
+        //     return accumulator + currentValue
+        // }, 0)
+        // // let a = numbers.reduce(()=>{},0) 
+        // console.log(total2);
+        let carts = [
+            {
+                name: "iphone5",
+                quantity: 5,
+                price: 2000,
+            },
+            {
+                name: "iphone12",
+                quantity: 6,
+                price: 6000,
+            },
+            {
+                name: "iphone15",
+                quantity: 8,
+                price: 8000,
+            },
+            {
+                name: "iphone2",
+                quantity: 9,
+                price: 9000,
+            },
+
+
+        ]
+        let total1 = carts.reduce((accumulator, currentValue, arr) => {
+            return accumulator + currentValue.price * currentValue.quantity
+        }, 0);
+        console.log(total1)
+
+    </script>
+</body>
+
+</html>
